@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from 'prop-types';
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import ToggleButton from "@material-ui/lab/ToggleButton";
@@ -28,3 +30,8 @@ const GenreMovie = ({ getData,  onSelect = () => {}, selected }) => {
 GenreMovie.displayName = "GenreMovie";
 
 export default GenreMovie;
+
+GenreMovie.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+  selected: PropTypes.string
+};

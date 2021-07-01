@@ -31,7 +31,11 @@ const CastingDetail = (props) => {
 
 export default CastingDetail;
 
-Poster.propTypes = {
-  poster_path: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+CastingDetail.propTypes = {
+  casting: PropTypes.shape({
+    profile_path: PropTypes.string,
+    name: PropTypes.string,
+    character: PropTypes.string,
+    known_for_department: PropTypes.string,
+  }),
 };

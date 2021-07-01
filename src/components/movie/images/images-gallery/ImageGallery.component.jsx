@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
+import PropTypes from 'prop-types';
 import Loader from "../../../common/loader/Loader.component";
 import ErrorMessage from "../../../common/error-message/ErrorMessage.component";
 import Poster from "../poster/Poster.component";
 
 import Carousel from 'react-elastic-carousel'
 
-import "./ImageGallery.styles.scss";
+import '../../../../assets/styles/components/ImageGallery.styles.scss';
 
 
 const ImageGallery = ({ loadingImagesMovie, imagesMovie }) => {
@@ -29,3 +30,7 @@ const ImageGallery = ({ loadingImagesMovie, imagesMovie }) => {
 };
 
 export default ImageGallery;
+
+ImageGallery.propTypes = {
+  imagesMovie: PropTypes.arrayOf(PropTypes.object),
+};

@@ -1,0 +1,84 @@
+@import "../App.scss";
+
+.button {
+  border-radius: 20px;
+  border: 1px solid $blue_primary;
+  font-size: $font_medium;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 0 16px;
+
+  &.primary {
+    color: $white;
+    background-color: $blue_primary;
+
+    &:hover:enabled {
+      background-color: $dark_blue;
+    }
+  }
+
+  &.secondary {
+    color: $blue_primary;
+    background-color: $white;
+
+    &:hover:enabled {
+      background-color: $light_blue_hover;
+    }
+  }
+
+  &.red {
+    color: $white;
+    background-color: $red_color;
+    border: 1px solid $red_color;
+
+    &:hover:enabled {
+      background-color: $red_button_hover;
+    }
+  }
+
+  &.red-secondary {
+    color: $red_color;
+    background-color: $white;
+    border: 1px solid $red_color;
+
+    &:hover:enabled {
+      border: 3px solid $red_color;
+      font-weight: $font_regular;
+    }
+  }
+
+  &.action {
+    color: $red_button_hover;
+    background-color: $white;
+    border: 1px solid $red_button_hover;
+  }
+
+  &:hover:enabled {
+    font-weight: $font_bold;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+
+  &.large {
+    height: 40px;
+    min-width: 120px;
+  }
+
+  &.small {
+    height: 30px;
+    min-width: 120px;
+  }
+
+  &.flex {
+    display: flex;
+    padding: 8px 56px;
+  }
+
+  &.auto-large {
+    height: 40px;
+    width: auto;
+  }
+}

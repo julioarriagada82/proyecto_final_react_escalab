@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 
@@ -13,3 +14,8 @@ const ErrorMessage = ({text}) => (
 ErrorMessage.displayName = "ErrorMessage";
 
 export default ErrorMessage;
+
+
+ErrorMessage.propTypes = {
+  text: PropTypes.string.isRequired
+};

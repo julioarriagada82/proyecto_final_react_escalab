@@ -14,6 +14,6 @@ const DetailImage = ({ poster_path, title }) => {
 export default DetailImage;
 
 Poster.propTypes = {
-  poster_path: PropTypes.string.isRequired,
+  poster_path: PropTypes.string,
   title: PropTypes.string.isRequired
 };

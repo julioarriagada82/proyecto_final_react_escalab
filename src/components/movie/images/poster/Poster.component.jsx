@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PATH_IMAGE_w300 } from '../../../../constants/variables'
-import placeholder from '../../../../assets/images/placeholder-poster.png';
+import placeholder from '../../../../assets/static/images/placeholder-poster.png';
 
 const Poster = ({ poster_path, title }) => {
   return (
@@ -17,6 +17,6 @@ const Poster = ({ poster_path, title }) => {
 export default Poster;
 
 Poster.propTypes = {
-  poster_path: PropTypes.string.isRequired,
+  poster_path: PropTypes.string,
   title: PropTypes.string.isRequired
 };

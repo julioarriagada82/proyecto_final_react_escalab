@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import Paper from "@material-ui/core/Paper";
 import Poster from "../images/poster/Poster.component";
 import CastingDetail from "./casting-detail/CastingDetail.component";
@@ -29,3 +30,13 @@ const CastingMovie = (props) => {
 };
 
 export default CastingMovie;
+
+CastingMovie.propTypes = {
+  data: PropTypes.shape({
+    profile_path: PropTypes.string,
+    name: PropTypes.string,
+  }),
+  handleCloseModal: PropTypes.func,
+  handleOpenModal: PropTypes.func,
+  modal: PropTypes.bool,
+};

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from 'prop-types';
 import Loader from "../../../common/loader/Loader.component";
 import ErrorMessage from "../../../common/error-message/ErrorMessage.component";
 import Casting from "../Casting.component";
@@ -27,3 +28,7 @@ const CastingMovie = ({ loadingCastingMovie, castingMovie }) => {
 };
 
 export default CastingMovie;
+
+CastingMovie.propTypes = {
+  loadingCastingMovie: PropTypes.bool.isRequired,
+};

@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import PropTypes from 'prop-types';
 import parse from "html-react-parser";
 import moment from 'moment';
 import Grid from "@material-ui/core/Grid";
@@ -8,7 +9,7 @@ import Label from "../../common/label/Label.component";
 import Poster from "../../movie/images/poster/Poster.component";
 import ImageGallery from "../../movie/images/images-gallery/ImageGallery.component";
 import CastingMovie from "../casting/casting-movie/CastingMovie.component";
-import "./Details.styles.scss";
+import '../../../assets/styles/components/Details.styles.scss';
 
 const Details = ({
     detailMovie,
@@ -79,14 +80,34 @@ const Details = ({
           <div className="gdetails__description">{parse(overview)}</div>
         </Grid>
       </Grid>
-      <Grid container spacing={1} justify="center">
+      <Grid container spacing={1} justify="center" className="carrusel">
         <CastingMovie loadingCastingMovie={loadingCastingMovie} castingMovie={castingMovie} />
       </Grid>
-      <Grid container spacing={1} justify="center">
+      <Grid container spacing={1} justify="center" className="carrusel">
         <ImageGallery loadingImagesMovie={loadingImagesMovie} imagesMovie={imagesMovie} />
       </Grid>
+      <br/>
     </Fragment>
   );
 };
 
 export default Details;
+
+Details.propTypes = {
+  detailMovie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    popularity: PropTypes.number.isRequired,
+    poster_path: PropTypes.string,
+    release_date: PropTypes.string.isRequired,
+    revenue: PropTypes.number.isRequired,
+    runtime: PropTypes.number.isRequired,
+    budget: PropTypes.number.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.object),
+    vote_average: PropTypes.number.isRequired,
+    vote_count: PropTypes.number.isRequired,
+    production_companies: PropTypes.arrayOf(PropTypes.object),
+    production_countries: PropTypes.arrayOf(PropTypes.object),
+    spoken_languages: PropTypes.arrayOf(PropTypes.object),
+    overview: PropTypes.string.isRequired
+  }),
+};
