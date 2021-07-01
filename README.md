@@ -48,3 +48,7 @@ Para poder desplegar la información dentro de la App se esta utilizando una API
 
 - Instalar dependencias `npm install`
 - Correr aplicación `npm start`
+
+### Link proyecto
+
+- https://proyecto-react-app.vercel.app/
